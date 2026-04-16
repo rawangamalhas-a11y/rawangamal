@@ -11,27 +11,27 @@
           <ul>  
            <li> <a href="index.html">Home</a></li>
            <li> <a href="courses.html">My Courses</a></li>
-           <li><a href="add-course.html">Add Course</a></li>
+           <li><a href="add-course.html" class="active-link">Add Course</a></li>
            <li><a href="contact.html">Contact Me</a></li>
           </ul>
         </nav>
     <main>
-        <section class="form-container">
-            <h2>Add New Course</h2>
-            <p>Use the form below to add a new course to your list. Make sure to fill in all the required fields.</p>
-            <form class="form-group">
-                <labal for="add course">Course Name:</labal>
-                <input type="text" id="course-name" name="course-name" required><br><br>
-                <labal for="add course">Instructor:</labal>
-                <input type="text" id="instructor" name="instructor" required><br><br>
-                <labal for="add course">Credit Hours:</labal>
-                <input type="number" id="credit-hours" name="credit-hours"  min="1" max="4" required><br><br>
-                <button type="submit">Add Course</button>
-            </form>
-        </section>
+        <h1>Add New Course</h1>
+        <p class="hero">Use the form below to add a new course to your list. Make sure to fill in all the required fields.</p>
+            <section class="form-container">
+                <form class="sds">
+                    <input type="text" placeholder="Name" required>
+                    <input type="number" placeholder="Phone Number" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Course Name" required>
+                    <input type="text" placeholder="Instructor" required>
+                    <input type="number" placeholder="Credit Hours" required>
+                    <button type="submit">Add Course</button>
+                </form>
+            </section>
     </main>
-        <footer>
+    <footer>
         <p> Designed By Rawan Gamal Hashim </br>-2026 Personal Courses Organizer</p>
     </footer>
 </body>
-</html>    
+</html>

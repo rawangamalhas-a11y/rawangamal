@@ -1,39 +1,66 @@
-body{
-    background-color:#0f172a;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    direction: ltr;
-    unicode-bidi: bidi-override;
-    font-family: 'poppins','cairo' ,sans-serif;
-    min-height: 100vh;
+*{
     margin: 0;
-}
-header{
-
-    color: white;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    font-family:'ppppins','cairo',sans-serif;  
+    padding: 0;
     box-sizing: border-box;
 }
-ul{
+body{
+    background-color:#243c72;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;overflow-x: hidden;
+}
+header{
+    width: 100%;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, sans-serif;  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav ul{
     list-style: none;
     margin: 0;
     padding: 5px;
     justify-content: center;
-    display: inline-flex;
+    display: flex;
+    gap:2rem;
 }
 nav{
     text-decoration: none;
     padding: 15px;
     transition: 0.3s;
-    font-family: 'Courier New', Courier;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     border-radius: 10px;
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
+    unicode-bidi: isolate;
+    width: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.hero{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'poppins','cairo' ,sans-serif;
+    max-width: 600px;
 }
 nav a{
     color:white;
@@ -44,6 +71,16 @@ nav a{
 }
 nav a:hover{
     color:#299ab6;
+    border: 2px solid #299ab6;
+    padding: 5px 10px;        
+    border-radius: 5px;
+
+}
+.active-link {
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .stats-container {
     display: flex;
@@ -53,8 +90,8 @@ nav a:hover{
     border-radius: 20px;
     margin: 20px 0;
     flex-direction: row;
-    padding: auto;
     margin:  auto;
+    flex-wrap: wrap;
 }
 
 .stat-card {
@@ -67,6 +104,7 @@ nav a:hover{
     margin: 30px;
     transition: transform 0.3s ease;
     width: 300px;
+    display: inline-block;
 
 }
 .stat-card:hover {
@@ -90,38 +128,42 @@ nav a:hover{
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: 'poppins','cairo' ,sans-serif;
-    max-width: 500px;
     max-height: 500px; 
     margin: auto;
-    Margin-top: 60px;
+    margin-top: 30px;
     text-align: left;
+    max-width: 600px;
+width: 90%;
     
 }
 main{
-    display: flex;
     justify-content: left;
     align-items: center;
     height: 100vh;
     border-radius: 8px;
-    display: inline;
     font-family:'poppins', 'cairo', serif,sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     color: white;
     word-spacing: 3px;
     text-align: center;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 table {
     border-collapse: collapse;
-    width: 100%;
-    margin-top: 60px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    max-width: 700px;
     max-height: 600px;
-
+    max-width: 600px;
+    width: 90%;
+   display: table;
 
 }
 table,th, td {
@@ -142,15 +184,49 @@ form {
     margin: 1px;
     padding-bottom: 2px 2px 2px 2px;
 }
-button{
-    border: none;
-    border-radius: 4px;
+.sds {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    max-width: 600px;
 }
 footer{
     text-align: center;
     font-size: 14px;
-    padding: 20px;
+    padding: 20px 0;
     color: #80b1b1;
-    margin-top: auto;
+    background-color: transparent;
+    width: 100%;
+    margin: 0;
+    border: none;
 
+
+}
+button[type="submit"] {
+    width: 100%;
+    background: #667eea;
+    color: white;
+    border: 2px solid rgb(40, 55, 132);
+    padding: auto;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;}
+@media (max-width: 768px) {
+.stats-container {
+        flex-direction: column; 
+        align-items: center;
+}
+.stat-card {
+        width: 90%; 
+        margin: 10px 0;
+}
+
+.hero, .form-container, table,.stats-container {
+        width: 90%; 
+        margin: 20px auto;
+        max-width: 1200px;
+
+}
 }
